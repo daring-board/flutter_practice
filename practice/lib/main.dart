@@ -29,6 +29,20 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  final List<Map<String, dynamic>> listItems = [
+  {
+    'text': 'Item 1',
+    'color': Colors.blue[600],
+  },
+  {
+    'text': 'Item 2',
+    'color': Colors.blue[300],
+  },
+  {
+    'text': 'Item 3',
+    'color': Colors.blue[100],
+  },
+];
 
   void _incrementCounter() {
     setState(() {
@@ -48,6 +62,13 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Column(
               children: <Widget>[
+                Card(
+                  child: Container(
+                    height: 100,
+                    width: 100,
+                    child: Text('CardItem'),
+                  )
+                ),
                 Container(
                   padding: const EdgeInsets.all(8),
                   margin: const EdgeInsets.all(8),
@@ -85,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {},
                   icon: const Icon(Icons.flight),
                   label: const Text('Flight'),
-                )
+                ),
               ]
             ),
           ],
