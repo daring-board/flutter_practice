@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Container(
                     height: 100,
                     width: 100,
-                    child: Text('CardItem'),
+                    child: const Text('CardItem'),
                   )
                 ),
                 Container(
